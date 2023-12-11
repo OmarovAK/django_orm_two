@@ -23,6 +23,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.tag
 
+    class Meta:
+        ordering = ['tag']
+
 
 class PositionTag(models.Model):
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE, related_name='tags')

@@ -15,10 +15,14 @@
             {% for tag in article.tags.all %}
             {% if tag.is_main %}
             <button type="button" class="btn btn-primary btn-sm" disabled>{{tag.tag}}</button>
-            {% else %}
-            <button type="button" class="btn btn-secondary btn-sm m-2" disabled>{{tag.tag}}</button>
             {% endif %}
             {% endfor%}
+            {% for tag in article.tags.all %}
+            {% if not tag.is_main %}
+            <button type="button" class="btn btn-secondary btn-sm m-2" disabled>{{tag.tag}}</button>
+            {% endif %}
+            {% endfor %}
+
         </div>
         {% endfor %}
     </div>
