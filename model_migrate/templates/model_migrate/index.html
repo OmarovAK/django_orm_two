@@ -1,0 +1,12 @@
+{% extends 'model_migrate/base.html' %}
+
+
+{% block main %}
+<h1 class="text-danger">Список страниц</h1>
+
+<ul class="list-group">
+    <li class="list-group-item"><a href="{% url 'list_scholl' %}">Страница школы</a></li>
+    <li class="list-group-item"><a href="{% url 'list_articles' %}">Список статей</a></li>
+</ul>
+
+{% endblock main %}
